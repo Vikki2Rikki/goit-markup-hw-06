@@ -11,7 +11,7 @@
     --main-gap: 24px; 
     --client-color: #8E8F99;
     --footer-accent-color: #31D0AA;
-    --hero-gra: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)) ;
+    --hero-gra: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
     --tra: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     --modal-border-color: rgba(33, 33, 33, 0.2);
     --secondary-modal-text-color: #757575;
@@ -223,7 +223,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
 /* ================Our features========= */
 .visually-hidden{
-    position: absolute;
+position: absolute;
 width: 1px;
 height: 1px;
 margin: -1px;
@@ -253,8 +253,6 @@ overflow: hidden;
     background-color: var(--secondary-background-color);
 }
 .features-img{
-
-    
     
 
 }
@@ -411,7 +409,6 @@ background-color: var(--accent-color);
 }
 .container-footer{
     display: flex;
-    outline: 1px solid #31D0AA;
 
 }
 
@@ -429,7 +426,7 @@ color: var(--secondary-text-color) ;
 }
 
 .soc-wrap {
-/* margin-right: 80px;    */
+
 }
 
 .soc-wrap-title{
@@ -608,6 +605,7 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 .example-subtitle{
     margin-bottom: 8px;
     color: var(--primary-title-color);
+
 }
 
 /* =========== Modal Window =========== */
@@ -758,20 +756,48 @@ margin-bottom: 4px;
 color: var(--secondary-modal-text-color);
 margin-bottom: 24px;
 
-
 }
-.modal-form-check-desc::before{
-    display: block;
-    content: '';
+
+.modal-form-check-desc span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 16px;
     height: 16px;
     border: 1.25px solid var(--primary-title-color);
 border-radius: 2px;
-cursor: pointer;
+margin-right: 8px;
+cursor: pointer; 
+transition: background-color var(--tra), border var(--tra), fill var(--tra); 
+fill: transparent;
 }
-.modal-form-check:checked + .modal-form-check-desc::before{
+
+.modal-form-check:checked + .modal-form-check-desc span{
     background-color: var(--accent-color);
+    border: none;
+    fill: var(--primary-background-color);
+
 }
 
 .modal-form-submit {
+
+}
+.modal-form-submit{
+    width: 169px;
+    height: 56px;
+    margin: 0 auto;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    border: none;
+    color: var(--primary-background-color);
+    background-color: var(--brand-color);
+    transition: background-color var(--tra),box-shadow var(--tra); 
+
+}
+.modal-form-submit:hover,
+.modal-form-submit:focus{
+background-color: var(--accent-color);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
